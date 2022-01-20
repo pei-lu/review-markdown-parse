@@ -19,7 +19,7 @@ public class MarkdownParse {
             if (currentIndex < 0 || nextCloseBracket < 0 || nextOpenBracket < 0 || openParen < 0 || closeParen < 0) {
                 break;
             }
-            if (markdown.charAt(nextOpenBracket - 1) != '!') {
+            if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket - 1) != '!') {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             currentIndex = closeParen + 1;
