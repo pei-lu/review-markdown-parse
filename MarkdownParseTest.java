@@ -46,4 +46,9 @@ public class MarkdownParseTest {
         String ImageTest = MarkdownParse.converter("Image.md");
         assertEquals(Image, MarkdownParse.getLinks(ImageTest));
     }
+
+    // @Test
+    // public void testInfiniteLoop() throws IOException {
+    //     ArrayList<String> Infin
+    // }
 }
