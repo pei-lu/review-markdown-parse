@@ -38,14 +38,22 @@ public class MarkdownParseTest {
         assertEquals(InBetween, MarkdownParse.getLinks(InBetweenTest));
     }
 
-    // @Test
-    // public void testImage() throws IOException {
-    //     ArrayList<String> Image = new ArrayList<>();
-    //     Image.add("link.com");
-    //     Image.add("thiswebsite.com");
-    //     String ImageTest = MarkdownParse.converter("Image.md");
-    //     assertEquals(Image, MarkdownParse.getLinks(ImageTest));
-    // }
+    @Test
+    public void testImage() throws IOException {
+        ArrayList<String> Image = new ArrayList<>();
+        Image.add("link.com");
+        Image.add("thiswebsite.com");
+        String ImageTest = MarkdownParse.converter("Image.md");
+        assertEquals(Image, MarkdownParse.getLinks(ImageTest));
+    }
+
+    @Test
+    public void testImageDistinction() throws IOException {
+        ArrayList<String> Image = new ArrayList<>();
+        Image.add("a-link.html");
+        String ImageTest = MarkdownParse.converter("image-distinction.md");
+        assertEquals(Image, MarkdownParse.getLinks(ImageTest));
+    }
 
     // @Test
     // public void testInfiniteLoop() throws IOException {
