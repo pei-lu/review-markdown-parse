@@ -76,7 +76,7 @@ public class MarkdownParseTest {
     }
 
     @Test 
-    void testSnippet3() throws IOException {
+    public void testSnippet3() throws IOException {
         ArrayList<String> SnippetExpected = new ArrayList<>();
         SnippetExpected.add("https://ucsd-cse15l-w22.github.io/");
         String SnippetActual = MarkdownParse.converter("Snippet1.md");
